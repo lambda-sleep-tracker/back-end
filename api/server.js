@@ -6,6 +6,7 @@ const middleware = require('./config/middleware');
 
 // import routers
 const {
+  authRouter,
   usersRouter,
 } = require('../resources');
 
@@ -14,6 +15,7 @@ middleware(server); // third-party middleware
 server.use(express.json());
 
 // routers
+server.use("/api/auth", authRouter);
 server.use("/api/users", usersRouter);
 
 server.get('/', (req, res) => {
