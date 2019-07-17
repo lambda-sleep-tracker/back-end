@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   getUsers,
 
-} = require('../data/helpers');
+} = require('../../data/helpers');
 
 /*
 @GET: users
