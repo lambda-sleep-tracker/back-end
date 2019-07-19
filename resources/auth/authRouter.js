@@ -11,7 +11,7 @@ const {
   addUser,
   getUserBy,
 
-} = require('../../data/helpers/usersDbhelper');
+} = require('../../data/helpers/usersDbHelper');
 
 /*
 @POST: register new user
