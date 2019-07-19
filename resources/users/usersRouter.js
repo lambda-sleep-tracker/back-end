@@ -94,7 +94,7 @@ router.delete('/sleeps/:id', async (req, res) => {
     if(removed){res.status(200).json(removed)}
     else{res.status(500).json(error)}
   }
-  catch(error){res.status(400).json(error)}
+  catch(error){res.status(400).json(error)} 
 })
 
 module.exports = router;
