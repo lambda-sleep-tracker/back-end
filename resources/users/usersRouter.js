@@ -93,7 +93,7 @@ router.delete('/sleeps/:id', async (req, res) => {
     const removed = await removeSleepRecord(id)
     if(removed){res.status(200).json(removed)}
     else{res.status(500).json(error)}
-  }
+  } 
   catch(error){res.status(400).json(error)} 
 })
 
