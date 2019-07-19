@@ -22,7 +22,7 @@ const {
 router.post('/register', async (req, res) => {
   const user = req.body;
 
-  const { email, password } = user;
+  const { username, email, password } = user;
 
   const hash = bcrypt.hashSync(password, 12);
 
@@ -30,7 +30,7 @@ router.post('/register', async (req, res) => {
 
   try {
 
-    if (!email || !password ) {
+    if (!username || !email || !password ) {
       return res.status(400)
         .json({
           errorMessage: "registration info missing."
@@ -100,7 +100,7 @@ router.post('/login', async (req, res) => {
 
       return res.status(200)
         .json({
-          message: `Welcome ${user.email}!`,
+          message: `Welcome ${user.username}!`,
           authToken: token,
         });
     }
