@@ -1,5 +1,5 @@
 module.exports = {
-  development: {
+  production: {
     client: 'sqlite3',
     connection: {
       filename: './data/sleep-tracker.sqlite3'
