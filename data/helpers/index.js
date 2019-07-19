@@ -1,4 +1,4 @@
-const usersDbHelper = require('./usersDbhelper');
+const usersDbHelper = require('./usersDbHelper');
 
 module.exports = {
   ...usersDbHelper,
