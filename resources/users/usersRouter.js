@@ -61,9 +61,8 @@ router.get('/sleeps/:id', async (req, res) => {
 //ADD sleep record for user
 router.post('/sleeps', async (req, res) => {
   const record = req.body;
-  console.log(record)
-  if(!record.bedtime && !record.waketime && !record.user_id && !record.sleepquality){
-    return res.status(500).json(`error: Must include a sleep time, wake time, date and sleep quality.`)
+  if(!record.user_id){
+    return res.status(500).json(`error: Must include a user_id.`)
   }
   else{
     try{
