@@ -19,7 +19,6 @@ function getUsers() {
 async function addUser(user) {
   const [id] = await db('users')
     .insert(user, 'id');
-
   return getUserById(id);
 }
 
@@ -55,9 +54,7 @@ function removeSleepRecord(id){
 }
 
 function getSleepRecords(){
-  console.log('in method')
-  return db('sleeps'); 
-  
+  return db('sleeps');   
 }
 
 function getSleepRecordById(id){
