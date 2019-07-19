@@ -48,7 +48,7 @@ function editSleepRecord(id, record){
     .update(record)
 }
 
-function removeSleepRecord(id){
+function removeSleepRecord(id){   
   return db('sleeps')
     .where({id})
     .del()
